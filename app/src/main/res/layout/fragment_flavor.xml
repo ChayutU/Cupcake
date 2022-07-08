@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2020 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,12 +20,13 @@
     tools:context=".FlavorFragment">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.example.cupcake.model.OrderViewModel" />
 
         <variable
-            name="flavorFragment"
+            name="fragment"
             type="com.example.cupcake.FlavorFragment" />
     </data>
 
@@ -115,7 +115,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/side_margin"
-                android:onClick="@{() -> flavorFragment.cancelOrder()}"
+                android:onClick="@{() -> fragment.cancelOrder()}"
                 android:text="@string/cancel"
                 app:layout_constraintEnd_toStartOf="@id/next_button"
                 app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +126,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/side_margin"
-                android:onClick="@{() -> flavorFragment.goToNextScreen()}"
+                android:onClick="@{() -> fragment.goToNextScreen()}"
                 android:text="@string/next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
